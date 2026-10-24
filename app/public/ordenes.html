@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claro Colombia | Órdenes de Mantenimiento</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f6f8; color: #333; }
+        header { background-color: #da291c; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: white; text-decoration: none; margin-left: 1.5rem; font-weight: bold; }
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .btn-rojo { background-color: #da291c; color: white; padding: 12px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-block; cursor: pointer; }
+        .btn-rojo:hover { background-color: #b82217; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+        th { background-color: #212529; color: white; }
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; color: white; }
+        .b-prev { background-color: #17a2b8; }
+        .b-corr { background-color: #fd7e14; }
+        .b-sol { background-color: #6f42c1; }
+        .estado-ok { color: #28a745; font-weight: bold; }
+        .estado-rep { color: #dc3545; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Claro Colombia | Gestión de Sedes</h2>
+        <nav>
+            <a href="/ordenes">Órdenes de Trabajo</a>
+            <a href="/registro">Nueva Orden</a>
+            <a href="/">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="top-bar">
+            <div>
+                <h2>Órdenes de Mantenimiento Registradas</h2>
+                <p>Seguimiento consecutivo del estado de infraestructura por sede</p>
+            </div>
+            <!-- Botón con redirección directa a la vista de registro -->
+            <a href="/registro" class="btn-rojo">+ Registrar Nueva Orden</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>N° Consecutivo</th>
+                    <th>Sede Claro</th>
+                    <th>Tipo de Mantenimiento</th>
+                    <th>Estado de la Sede</th>
+                    <th>Registro Fotográfico</th>
+                    <th>Observación Técnica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>#ORD-2026-001</strong></td>
+                    <td>Sede Principal Plaza Claro</td>
+                    <td><span class="badge b-prev">Preventivo</span></td>
+                    <td><span class="estado-ok">Operativa / Normal</span></td>
+                    <td>Antes, Durante y Después OK</td>
+                    <td>Mantenimiento de UPS y limpieza de cableado en centro de datos.</td>
+                </tr>
+                <tr>
+                    <td><strong>#ORD-2026-002</strong></td>
+                    <td>Sede Administrativa Medellín</td>
+                    <td><span class="badge b-corr">Correctivo</span></td>
+                    <td><span class="estado-rep">En Reparación</span></td>
+                    <td>Antes y Durante cargados</td>
+                    <td>Corrección de corto en tablero secundario por falla eléctrica.</td>
+                </tr>
+                <tr>
+                    <td><strong>#ORD-2026-003</strong></td>
+                    <td>Sede Centro de Experiencia Cali</td>
+                    <td><span class="badge b-sol">Solicitud del Cliente</span></td>
+                    <td><span class="estado-ok">Operativa</span></td>
+                    <td>Antes, Durante y Después OK</td>
+                    <td>Instalación de 4 nuevos puntos de red para asesores de atención.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
